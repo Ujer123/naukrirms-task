@@ -38,6 +38,10 @@ body {
     width: fit-content;
   }
 
+  .option:hover{
+    border: 2px solid #FF6B82;
+        background: #FFF9FA;
+  }
 
 h2::before,
 h2::after {
