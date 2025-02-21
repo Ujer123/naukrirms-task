@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BOGO Pricing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+            <h2>YAY! It’s BOGO</h2>
+            
+      <div class="option" role="radiogroup">
+        <div class="option-offer">
+        <div class="offer-stand d-flex align-center">
+          <input type="radio" name="pricing-option" class="sr-only" id="radio-1" />
+          <div>
+            <label for="option-1" 
+            class="option__label"
+            role="radio"
+            aria-expanded="false">1 Unit <span class="discount">10% Off</span></label><br />
+            <p class="text-md m-0">Standard Price</p>
+          </div>
+        </div>
+        <div>
+          <p class="price">$10.00 USD</p>
+          <del>$24.00 USD</del>
+        </div>
+      </div>
+      <div class="option__details" id="details-1">
+        <div class="row">
+            <small>#1</small>
+            <div class="select-container">
+              <div>
+                <small>Size</small><br>
+                <select>
+                  <option>S</option>
+                  <option>M</option>
+                  <option>L</option>
+                </select>
+              </div>
+              <div>
+                <small>Colour</small><br>
+                <select>
+                  <option>Black</option>
+                  <option>Red</option>
+                  <option>Blue</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        
+          <div class="row">
+            <small>#2</small>
+            <div class="select-container">
+              <select>
+                <option>S</option>
+                <option>M</option>
+                <option>L</option>
+              </select>
+              <select>
+                <option>Colour</option>
+                <option>Red</option>
+                <option>Blue</option>
+              </select>
+            </div>
+          </div>
+      </div>
+      </div>
+
+      <div class="option" role="radiogroup">
+        <div class="most-popular">MOST POPULAR</div>
+        <div class="option-offer">
+          <div class="offer-stand">
+            <input type="radio" name="pricing-option" class="sr-only" id="radio-2" checked/>
+            <label for="option-2" 
+            class="option__label"
+            role="radio"
+            aria-expanded="true">2 Unit <span class="discount">20% Off</span></label>
+          </div>
+          <div>
+            <p class="price">$18.00 USD</p>
+            <del>$24.00 USD</del>
+          </div>
+        </div>
+        <div class="option__details" id="details-2">
+            <div class="row">
+                <small>#1</small>
+                <div class="select-container">
+                  <div>
+                    <small>Size</small><br>
+                    <select>
+                      <option>S</option>
+                      <option>M</option>
+                      <option>L</option>
+                    </select>
+                  </div>
+                  <div>
+                    <small>Colour</small><br>
+                    <select>
+                      <option>Black</option>
+                      <option>Red</option>
+                      <option>Blue</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="row">
+                <small>#2</small>
+                <div class="select-container">
+                  <select>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                  </select>
+                  <select>
+                    <option>Colour</option>
+                    <option>Red</option>
+                    <option>Blue</option>
+                  </select>
+                </div>
+              </div>
+        </div>
+      </div>
+
+      <div class="option" role="radiogroup">
+        <div class="option-offer">
+        <div class="offer-stand">
+            <input type="radio" name="pricing-option" class="sr-only" id="radio-3"/>
+            <label for="option-3" 
+            class="option__label"
+            role="radio"
+            aria-expanded="false">3 Unit <span class="discount">30% Off</span></label>
+        </div>
+        <div>
+            <p class="price">$24.00 USD</p>
+            <del>$24.00 USD</del>
+          </div>
+          </div>
+        <div class="option__details" id="details-3">
+          <div class="row">
+            <small>#1</small>
+            <select>
+              <option>S</option>
+              <option>M</option>
+              <option>L</option>
+            </select>
+            <select>
+              <option>Black</option>
+              <option>Red</option>
+              <option>Blue</option>
+            </select>
+          </div>
+          <div class="row">
+            <small>#2</small>
+            <select>
+              <option>S</option>
+              <option>M</option>
+              <option>L</option>
+            </select>
+            <select>
+              <option>Colour</option>
+              <option>Red</option>
+              <option>Blue</option>
+            </select>
+          </div>
+          <div class="row">
+            <small>#3</small>
+            <select>
+              <option>S</option>
+              <option>M</option>
+              <option>L</option>
+            </select>
+            <select>
+              <option>Colour</option>
+              <option>Red</option>
+              <option>Blue</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex justify-between">
+        <p class="text-pink text-lg fw-semibold">Free Delivery</p>
+        <p class="text-lg fw-semibold">Total: <span id="total">$18.00 USD</span></p>
+      </div>
+
+      <button class="add-to-cart">+ Add to Cart</button>
+      <div class="rights-reserved">
+          <p>@ Powered by Pumper</p>
+        </div>
+    </div>
+
+    <script>
+      // option detail js code
+      document.addEventListener('DOMContentLoaded', function() {
+  const options = document.querySelectorAll('.option');
+
+  options.forEach(function(option) {
+    const radio = option.querySelector('input[type="radio"]');
+    const details = option.querySelector('.option__details');
+
+    //it was use to check if aria-expan is true or false
+    option.setAttribute('aria-expanded', radio.checked);
+    if (radio.checked) {
+      details.style.display = 'block';
+    } else {
+      details.style.display = 'none';
+    }
+
+    option.addEventListener('click', function() {
+      options.forEach(function(otherOption) {
+        const otherRadio = otherOption.querySelector('input[type="radio"]');
+        const otherDetails = otherOption.querySelector('.option__details');
+        const isSelected = otherOption === option;
+
+        otherOption.setAttribute('aria-expanded', isSelected);
+        otherRadio.checked = isSelected;
+
+        if (isSelected) {
+          otherDetails.style.display = 'block';
+        } else {
+          otherDetails.style.display = 'none';
+        }
+      });
+    });
+  });
+});
+    </script>
+  </body>
+</html>
