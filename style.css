@@ -17,7 +17,7 @@ body {
 .option {
     padding: 22px 25px;
     font-size: 10.85px;
-    border: 1px solid #ddd;
+    border: 2px solid #ddd;
     margin: 20px 0;
     cursor: pointer;
     position: relative;
